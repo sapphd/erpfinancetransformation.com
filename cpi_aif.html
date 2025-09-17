@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Journal App</title>
+
+	<!-- mobile responsive meta -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/responsive.css">
+
+	<link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" href="images/favicon/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="images/favicon/favicon-16x16.png" sizes="16x16">
+
+
+
+<link href="https://fonts.googleapis.com/css?family=Heebo:400,700&display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/ppmori" rel="stylesheet">
+</head>
+<body>
+
+<div class="boxed_wrapper">
+
+<header class="top-bar">
+    <div class="container">
+        <div class="clearfix">
+            <ul class="top-bar-text float_left">
+                <li>ERP Finance Transformation</li>
+            </ul>
+            <ul class="top-bar-text float_right">
+                <li>melnizams@gmail.com</li>
+            </ul>
+        </div>
+
+
+    </div>
+</header>
+
+
+
+<section class="theme_menu stricky">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9 menu-column">
+                <nav class="menuzord" id="main_menu">
+                   <ul class="menuzord-menu">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="journal.html">Journal App</a></li>
+                        <li><a href="accruals.html">Accruals</a></li>
+                        <li><a href="morefinance.html">More Finance</a></li>
+                        <li class="active"><a href="integration_suite_home.html">SAP BTP and Tech</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+   </div>
+</section>
+
+<section class="iflow-process" style="padding: 60px 0; background: #fff;">
+    <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+        <div class="section-title no-underline" style="text-align: left; margin-bottom: 40px;">
+            <h2 style="font-family: 'Heebo', sans-serif; font-size: 36px; font-weight: 700; color: #1a237e; line-height: 1.2;">Leverage FI Posting App using SAP Integration Suite and AIF</h2>
+        </div>
+        
+        <div class="row" style="display: flex; align-items: flex-start; gap: 30px; margin-bottom: 40px;">
+            <div class="col-md-7">
+                <p style="color: #555; line-height: 1.6; font-size: 18px;">This guide explores the power of SAP CPI (Cloud Integration Suite) IFlows to automate and streamline financial data integration from CSV files to SAP HANA, using a series of steps that involve importing, transforming, and integrating data.</p>
+            </div>
+            <div class="col-md-5">
+                <img src="images/btp/cpi_aif.jpg" alt="SAP Integration Suite Dashboard" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="iflow-process" style="padding: 60px 0; background: #fff;">
+    <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+        <div class="section-title no-underline" style="text-align: left; margin-bottom: 40px;">
+            <h2 style="font-family: 'Heebo', sans-serif; font-size: 36px; font-weight: 700; color: #1a237e; line-height: 1.2;">CPI Iflow Process with CSV input</h2>
+        </div>
+        
+        <div class="process-steps" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; margin-bottom: 40px;">
+            <div class="step">
+                <h3 style="color: #1a237e; font-size: 24px; margin-bottom: 15px;">Import</h3>
+                <p style="color: #555; line-height: 1.6;">The IFlow begins by importing CSV data files from an SFTP server. Data is retrieved and prepared for further processing.</p>
+            </div>
+            
+            <div class="step">
+                <h3 style="color: #1a237e; font-size: 24px; margin-bottom: 15px;">Transform</h3>
+                <p style="color: #555; line-height: 1.6;">Next, the data is transformed from CSV format to XML and then to JSON. This ensures compatibility with SAP HANA and facilitates data processing.</p>
+            </div>
+            
+            <div class="step">
+                <h3 style="color: #1a237e; font-size: 24px; margin-bottom: 15px;">Integrate</h3>
+                <p style="color: #555; line-height: 1.6;">The JSON data is then integrated into SAP HANA using a REST call. This allows for seamless data exchange between the IFlow and SAP HANA.</p>
+            </div>
+            
+            <div class="step">
+                <h3 style="color: #1a237e; font-size: 24px; margin-bottom: 15px;">Create</h3>
+                <p style="color: #555; line-height: 1.6;">Finally, the IFlow utilizes the data in SAP HANA to create finance documents. This automates the creation of financial records based on imported data.</p>
+            </div>
+        </div>
+
+        <div class="iflow-diagram" style="margin-top: 40px;">
+            <img src="images/btp/Iflow_CSV.jpg" alt="ZRTR_GL_POST_JOURNAL_ENTRIES IFlow Diagram" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
+        </div>
+    </div>
+</section>
+
+<section class="iflow-process" style="padding: 60px 0; background: #fff;">
+    <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+        <div class="section-title no-underline" style="text-align: left; margin-bottom: 40px;">
+            <h2 style="font-family: 'Heebo', sans-serif; font-size: 36px; font-weight: 700; color: #1a237e; line-height: 1.2;">CPI Iflow Process with SOAP input</h2>
+        </div>
+        
+        <div class="process-steps" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; margin-bottom: 40px;">
+            <div class="step">
+                <h3 style="color: #1a237e; font-size: 24px; margin-bottom: 15px;">Import</h3>
+                <p style="color: #555; line-height: 1.6;">The IFlow begins by receiving incoming data through a <strong style="color: #1a237e;">SOAP sender adapter</strong>. This allows external systems to trigger the integration process and send data for further processing.</p>
+            </div>
+            
+            <div class="step">
+                <h3 style="color: #1a237e; font-size: 24px; margin-bottom: 15px;">Transform</h3>
+                <p style="color: #555; line-height: 1.6;">The incoming SOAP data is converted from <strong style="color: #1a237e;">XML to JSON</strong> format. This transformation ensures compatibility with SAP HANA and prepares the data for further integration steps.</p>
+            </div>
+            
+            <div class="step">
+                <h3 style="color: #1a237e; font-size: 24px; margin-bottom: 15px;">Integrate</h3>
+                <p style="color: #555; line-height: 1.6;">The JSON data is then integrated into SAP HANA using a REST call. This allows for seamless data exchange between the IFlow and SAP HANA.</p>
+            </div>
+            
+            <div class="step">
+                <h3 style="color: #1a237e; font-size: 24px; margin-bottom: 15px;">Create</h3>
+                <p style="color: #555; line-height: 1.6;">Finally, the IFlow utilizes the data in SAP HANA to create finance documents. This automates the creation of financial records based on imported data.</p>
+            </div>
+        </div>
+
+        <div class="iflow-diagram" style="margin-top: 40px;">
+            <img src="images/btp/Iflow_SOAP.jpg" alt="SOAP Integration IFlow Diagram" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
+        </div>
+    </div>
+</section>
+
+
+
+<section class="iflow-process2" style="padding: 60px 0; background: #fff;">
+    <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+
+        <div class="section-title no-underline" style="text-align: left; margin-bottom: 40px;">
+            <h2 style="font-family: 'Heebo', sans-serif; font-size: 36px; font-weight: 700; color: #1a237e; line-height: 1.2;">CSV to XML Transformation</h2>
+        </div>
+        <div class="iflow-diagram" style="margin-top: 40px;">
+            <img src="images/btp/Excel.jpg" alt="ZRTR_GL_POST_JOURNAL_ENTRIES IFlow Diagram" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
+            <div class="step">
+                <h3 style="color: #1a237e; font-size: 24px; margin-bottom: 15px;">Create</h3>
+                <p style="color: #555; line-height: 1.6;">File is saved as CSV. SAP CPI will use the following XSD file to transform the CSV file into XML format</p>
+            </div>
+
+        <div class="iflow-diagram" style="margin-top: 40px;">
+            <img src="images/btp/xsd.jpg" alt="ZRTR_GL_POST_JOURNAL_ENTRIES IFlow Diagram" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
+        </div>
+        <div class="step">
+            <h3 style="color: #1a237e; font-size: 24px; margin-bottom: 15px;">Create</h3>
+            <p style="color: #555; line-height: 1.6;">CSV to XML standard action parameters :</p>
+        </div>
+        
+        <div class="iflow-diagram" style="margin-top: 40px;">
+            <img src="images/btp/csv_to_xml.jpg" alt="ZRTR_GL_POST_JOURNAL_ENTRIES IFlow Diagram" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
+        </div>
+    </div>
+</section>
+
+<section class="iflow-process3" style="padding: 60px 0; background: #fff;">
+    <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+
+        <div class="section-title no-underline" style="text-align: left; margin-bottom: 40px;">
+            <h2 style="font-family: 'Heebo', sans-serif; font-size: 36px; font-weight: 700; color: #1a237e; line-height: 1.2;">Logging : Set SAP_ApplicationID with the reference</h2>
+        </div>
+        <div class="iflow-diagram" style="margin-top: 40px;">
+            <div class="step">
+                <p style="color: #555; line-height: 1.6;">Groovy script : By setting SAP_ApplicationID, the user can search the messages by the reference field.</p>
+            </div>
+
+        <div class="iflow-diagram" style="margin-top: 40px;">
+            <img src="images/btp/20_Groovy.jpg" alt="ZRTR_GL_POST_JOURNAL_ENTRIES IFlow Diagram" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
+        </div>
+    </div>
+</section>
+
+<section class="rest-api-section" style="padding: 60px 0; background: #f9f9f9;">
+    <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+        <div style="display: flex; align-items: center; gap: 60px;">
+            <div class="content" style="flex: 1;">
+                <h2 style="font-family: 'Heebo', sans-serif; font-size: 36px; font-weight: 700; color: #1a237e; margin-bottom: 40px;">Calling SAP HANA via REST</h2>
+                
+                <div class="step" style="margin-bottom: 30px;">
+                    <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
+                        <div style="width: 40px; height: 40px;">
+                            <svg viewBox="0 0 24 24" style="fill: #1a237e;"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/><path d="M12 6c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm0 10c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z"/></svg>
+                        </div>
+                        <h3 style="color: #1a237e; font-size: 24px; margin: 0;">REST API Call</h3>
+                    </div>
+                    <p style="color: #555; line-height: 1.6; margin-left: 55px;">The IFlow utilizes the REST adapter to send a POST request to a defined REST endpoint in SAP HANA, sending the converted JSON data.</p>
+                </div>
+
+                <div class="step" style="margin-bottom: 30px;">
+                    <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
+                        <div style="width: 40px; height: 40px;">
+                            <svg viewBox="0 0 24 24" style="fill: #1a237e;"><path d="M4 6h18V4H4c-1.1 0-2 .9-2 2v11H0v3h14v-3H4V6zm19 2h-6c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h6c.55 0 1-.45 1-1V9c0-.55-.45-1-1-1zm-1 9h-4v-7h4v7z"/></svg>
+                        </div>
+                        <h3 style="color: #1a237e; font-size: 24px; margin: 0;">Data Transmission</h3>
+                    </div>
+                    <p style="color: #555; line-height: 1.6; margin-left: 55px;">The REST API call transmits the JSON data over a secure network connection to the SAP HANA database, ensuring data integrity.</p>
+                </div>
+
+                <div class="step">
+                    <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
+                        <div style="width: 40px; height: 40px;">
+                            <svg viewBox="0 0 24 24" style="fill: #1a237e;"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+                        </div>
+                        <h3 style="color: #1a237e; font-size: 24px; margin: 0;">Response Handling</h3>
+                    </div>
+                    <p style="color: #555; line-height: 1.6; margin-left: 55px;">The IFlow processes the response from SAP HANA, checking for successful data reception and handling any potential errors or warnings.</p>
+                </div>
+            </div>
+
+            <div class="image" style="flex: 1;">
+                <img src="images/btp/Side_Groovy.jpg" alt="SAP HANA REST API Integration" style="width: 70%; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); margin: 0 auto; display: block;">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="iflow-process3" style="padding: 60px 0; background: #fff;">
+    <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+
+        <div class="section-title no-underline" style="text-align: left; margin-bottom: 40px;">
+            <h2 style="font-family: 'Heebo', sans-serif; font-size: 36px; font-weight: 700; color: #1a237e; line-height: 1.2;">ABAP Logic for CPI to AIF Data Transfer</h2>
+        </div>
+        <div class="iflow-diagram" style="margin-top: 40px;">
+             <div class="step">
+                <p style="color: #555; line-height: 1.6;">The incoming data from SAP CPI (Cloud Platform Integration) is seamlessly transferred to the SAP AIF (Application Interface Framework) through custom-developed ABAP code. The code leverages an XML enabler instance to process and transform the data before calling the transfer_to_aif method.</p>
+            </div>
+
+        <div class="iflow-diagram" style="margin-top: 40px;">
+            <img src="images/btp/Eclipse.jpg" alt="ZRTR_GL_POST_JOURNAL_ENTRIES IFlow Diagram" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
+        </div>
+    </div>
+</section>
+
+<section class="aif-process" style="padding: 60px 0; background: #fff;">
+    <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+        <div class="section-title no-underline" style="text-align: left; margin-bottom: 40px;">
+            <h2 style="font-family: 'Heebo', sans-serif; font-size: 36px; font-weight: 700; color: #1a237e; line-height: 1.2;">Creating Finance Documents in SAP AIF</h2>
+        </div>
+
+        <div style="display: flex; gap: 40px; margin-bottom: 40px;">
+            <!-- Step 1 -->
+            <div style="flex: 1; background: #f8f9fa; padding: 30px; border-radius: 8px; position: relative;">
+                <div style="position: absolute; top: 20px; left: 20px; width: 40px; height: 40px; background: #1a237e; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold;">1</div>
+                <h3 style="color: #1a237e; font-size: 24px; margin: 0 0 20px 50px;">Data Mapping</h3>
+                <p style="color: #555; line-height: 1.6;">The receiver program in SAP, maps the data to the relevant fields within the finance document structure in the SAP system.</p>
+            </div>
+
+            <!-- Step 2 -->
+            <div style="flex: 1; background: #f8f9fa; padding: 30px; border-radius: 8px; position: relative;">
+                <div style="position: absolute; top: 20px; left: 20px; width: 40px; height: 40px; background: #1a237e; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold;">2</div>
+                <h3 style="color: #1a237e; font-size: 24px; margin: 0 0 20px 50px;">Document Posting</h3>
+                <p style="color: #555; line-height: 1.6;">The created finance document undergoes validation to ensure it conforms to SAP's rules and regulations, guaranteeing data integrity and compliance.</p>
+            </div>
+        </div>
+
+        <div style="margin-bottom: 40px;">
+            <p style="color: #555; line-height: 1.6; margin-bottom: 20px;">In SAP, the financial documents are created by SAP AIF, <strong>Application Interface Framework</strong>. AIF enables integration between SAP systems and external applications. In this case, the IFlow provides data to AIF, which then uses this data to create the finance documents.</p>
+            <p style="color: #555; line-height: 1.6;">The AIF acts as a bridge between the external data and SAP's internal finance document creation process. This allows for seamless data transfer and automated document creation.</p>
+        </div>
+
+        <div class="aif-screenshot" style="margin-top: 40px;">
+            <img src="images/btp/aif.jpg" alt="SAP AIF Error Handling Monitor" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
+        </div>
+    </div>
+</section>
+
+
+
+	<!-- jQuery js -->
+	<script src="js/jquery.js"></script>
+	<!-- bootstrap js -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- jQuery ui js -->
+	<script src="js/jquery-ui.js"></script>
+	<!-- owl carousel js -->
+	<script src="js/owl.carousel.min.js"></script>
+	<!-- jQuery validation -->
+	<script src="js/jquery.validate.min.js"></script>
+	<!-- google map -->
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRvBPo3-t31YFk588DpMYS6EqKf-oGBSI"></script>
+	<script src="js/gmap.js"></script>
+	<!-- mixit up -->
+	<script src="js/wow.js"></script>
+	<script src="js/jquery.mixitup.min.js"></script>
+	<script src="js/jquery.fitvids.js"></script>
+    <script src="js/bootstrap-select.min.js"></script>
+	<script src="js/menuzord.js"></script>
+
+	<!-- revolution slider js -->
+	<script src="assets/revolution/js/jquery.themepunch.tools.min.js"></script>
+	<script src="assets/revolution/js/jquery.themepunch.revolution.min.js"></script>
+	<script src="assets/revolution/js/extensions/revolution.extension.actions.min.js"></script>
+	<script src="assets/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
+	<script src="assets/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+	<script src="assets/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+	<script src="assets/revolution/js/extensions/revolution.extension.migration.min.js"></script>
+	<script src="assets/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+	<script src="assets/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+	<script src="assets/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+	<script src="assets/revolution/js/extensions/revolution.extension.video.min.js"></script>
+
+	<!-- fancy box -->
+	<script src="js/jquery.fancybox.pack.js"></script>
+	<script src="js/jquery.polyglot.language.switcher.js"></script>
+	<script src="js/nouislider.js"></script>
+	<script src="js/jquery.bootstrap-touchspin.js"></script>
+	<script src="js/SmoothScroll.js"></script>
+	<script src="js/jquery.appear.js"></script>
+	<script src="js/jquery.countTo.js"></script>
+	<script src="js/jquery.flexslider.js"></script>
+	<script src="js/imagezoom.js"></script>
+	<script id="map-script" src="js/default-map.js"></script>
+	<script src="js/custom.js"></script>
+
+</div>
+
+</body>
+</html>

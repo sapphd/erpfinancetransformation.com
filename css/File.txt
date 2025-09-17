@@ -1,0 +1,38 @@
+Header-Accruals Reclassification and BU Contra Posting
+This solution automates the process of identifying, validating, and posting some accruals and correction entries in SAP S/4HANA. It ensures that manual entries posted for Marine transactions align with Business Unit (BU) requirements by creating accurate and automated BU contra entries. The tool integrates data extraction, validation, reporting, and posting processes to streamline month-end accrual postings and minimize manual intervention.
+
+Header-Automatic Intercompany Summarization and Netting for Open Items
+This solution automates the monthly summarization and netting of intercompany and intracompany open items in SAP S/4HANA. By consolidating multiple line items into a single summarized document, the tool improves efficiency, simplifies aging analysis, and ensures compliance with company Intercompany and Intracompany Policy.
+
+Header-High-Value Liability (HVL) Approval Workflow
+This solution was developed as part of the High-Value Liability (HVL) Approval Project to ensure Treasurer approval for vendor entries exceeding a specified high dollar threshold. The module interacts with the BSP Application to process external responses generated when an HVL approver takes action via an email approval workflow.
+
+Header-Enhancing Timesheet Review and Approval with Automated Opentext VIM Functionality
+Leveraging the power of OpenText Vendor Invoice Management (VIM) , the solution is for reviewing, approving, and rejecting multiple ECM timesheets, streamlining the process to support quicker invoice processing. The functionality integrates with SAP Fiori apps for real-time approval workflows while offering a fallback custom transaction in S/4 for business continuity.
+
+Header-Optimizing CO Substitution and COPA Derivation Processes
+The COPA Derivation process has been optimized through the cleanup of derivation exits and the implementation of updated logic to handle attributes like cost center, plant, profit center, and business location. By leveraging advanced SAP techniques such as substitution rules, exit functions, and KEDR configurations, this solution improves data accuracy, enhances reporting efficiency, and aligns with business requirements for profitability analysis and operational planning.
+
+Header-Lockbox Pre-Processing Enhancements
+This set of enhancements addresses key challenges in lockbox processing for the company, enhancing functionality for specific scenarios, such as handling high-value payments, intercompany clearing, and large payment advices. These custom enhancements ensure seamless payment matching, intercompany clearing, and SAP compliance where standard functionalities are insufficient.
+
+Header-Automated Remittance Advice Delivery for Vendors
+This enhancement automates the generation and delivery of remittance advice via email, fax, or paper for vendors based on their communication preferences stored in the Vendor Master. Integrated into the SAP F110 payment run program, the solution ensures efficient delivery while providing a fallback mechanism for exceptions and paper-based processes.
+
+Header-Automated Attachment of Accounting Support Documents
+This extension provides a user-friendly interface and automated functionality to attach supporting accounting documents (e.g., Excel, PDF) to SAP documents efficiently. By replacing the time-consuming manual process of using the “Store Business Document” menu option, this solution significantly improves efficiency for users managing high volumes of financial and material document attachments.
+
+Header-Intercompany "Put on Account" Functionality for Lockbox Receivables
+This enhancement provides an automated “Put on Account” process for intercompany lockbox receivables, improving cash application efficiency and minimizing manual intervention. By leveraging existing FBE1 functionality and modifying key user exits, the system ensures that payments without an associated customer invoice are automatically marked as “Applied” instead of “Posted on Account”.
+
+Header-SAP Lockbox Functionalities Enhancement with Selection Screen and Display Grid Customizations
+This is a solution of comprehensive enhancements to the SAP Lockbox process by customizing Business Transaction Events (BTEs) and integrating additional functionalities to improve user experience and data visibility. Optimized the technical flow to include new fields (e.g., FEBKO and FEBRE), enabling tailored data presentation and robust tracking.
+
+Header-Positive Pay File Generation for the Bank
+This functionality automates the generation of a Positive Pay File, also referred to as a Check Issue File, to ensure secure processing of checks issued or voided by the company. The Positive Pay File is sent daily to the Bank, to enable verification of checks presented for encashment, preventing fraud and ensuring compliance with banking protocols.
+
+Header-Partner Profit Center Substitution and Validation for FI, MM, and SD Transactions
+This enhancement automates the population and validation of the Partner Profit Center field for intercompany and intra-company transactions during document posting. By implementing substitution rules, validation logic, and integration with document splitting, the solution ensures accurate and efficient processing of intercompany revenue, COGS, and other related entries.
+
+Header-Exchange Rate Integration for SAP S/4HANA
+In today’s global business landscape, managing currency exchange rates efficiently is critical for accurate financial reporting and operational excellence. This program automates the seamless integration of exchange rates from Thomson Reuters into SAP S/4HANA, enabling organizations to record transactions in multiple currencies (document, local, and group) simultaneously. By supporting parallel currency capabilities, the solution enhances local and group reporting accuracy and simplifies month-end currency revaluation and translation processes.

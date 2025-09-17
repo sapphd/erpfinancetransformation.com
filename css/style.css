@@ -259,6 +259,11 @@ input,textarea {font-family: 'Hind', sans-serif;display: block; font-size: 16px;
     margin-left: -25px;
 }
 
+.section-title.no-underline:before {
+    display: none;
+}
+
+
 
 
 
@@ -378,6 +383,24 @@ input,textarea {font-family: 'Hind', sans-serif;display: block; font-size: 16px;
     text-transform: uppercase;
     color: #191970; /* Midnight Blue */
     font-weight: 600;
+}
+
+/* Active navigation styling */
+.menuzord-menu > li.active > a,
+.menuzord-menu > li.active > a:hover,
+.menuzord-menu > li.active > a:focus {
+    color: #48c7ec !important;
+    background-color: rgba(72, 199, 236, 0.1) !important;
+    border-bottom: 3px solid #48c7ec !important;
+    border-radius: 4px 4px 0 0;
+    font-weight: 700;
+}
+
+.menuzord-menu > li > a:hover {
+    color: #48c7ec !important;
+    background-color: rgba(72, 199, 236, 0.05) !important;
+    border-radius: 4px;
+    transition: all 0.3s ease;
 }
 .menuzord-menu > li:first-child a {
     padding-left: 0px;
