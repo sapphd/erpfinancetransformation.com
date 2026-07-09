@@ -65,10 +65,153 @@
 <section class="more_interfaces1" style="padding: 60px 0; background: #fff;">
     <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
         <div class="section-title no-underline" style="text-align: left; margin-bottom: 30px;">
-            <h2 style="font-family: 'Heebo', sans-serif; font-size: 36px; font-weight: 700; color: #333; line-height: 1.2;">More Interfaces</h2>
+            <h2 style="font-family: 'Heebo', sans-serif; font-size: 36px; font-weight: 700; color: #333; line-height: 1.2;">Allegro to SAP Billing Data</h2>
         </div>
         <p style="font-family: 'Heebo', sans-serif; font-size: 16px; line-height: 1.6; color: #666;">
-            A collection of SAP interface solutions covering inbound and outbound integrations with banks, third-party systems, and enterprise applications. Content coming soon.
+            An inbound integration that sends Accounts Receivable billing data from the Allegro trading system into SAP S/4HANA. It transfers financial information related to product sales via gas deals, transportation invoices, and broker invoices accounted for in Allegro, posting directly into the General Ledger Universal Journal (ACDOCA). When receivable invoices are approved in Allegro they are sent to SAP on a configurable 15-minute schedule, with the option to send entries ad hoc at the click of a button. The interface handles around 300 documents per day, supporting revenue recognition and receivable creation for the commercial gas business.
+        </p>
+    </div>
+</section>
+
+<section class="more_interfaces2" style="padding: 60px 0; background: #fff;">
+    <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+        <div class="section-title no-underline" style="text-align: left; margin-bottom: 30px;">
+            <h2 style="font-family: 'Heebo', sans-serif; font-size: 36px; font-weight: 700; color: #333; line-height: 1.2;">Allegro to SAP AP Invoice Data</h2>
+        </div>
+        <p style="font-family: 'Heebo', sans-serif; font-size: 16px; line-height: 1.6; color: #666;">
+            An inbound integration that receives Accounts Payable invoice data from Allegro and posts it into SAP S/4HANA. It covers vendor liabilities arising from gas purchases from producers, transportation pipeline charges, broker commissions, and imbalance payments, posting into the Universal Journal with vendor document types driven by tax logic. As the mirror of the AR billing feed, it completes the picture: cost recognition and liability creation on the buy side, revenue recognition and receivable creation on the sell side.
+        </p>
+    </div>
+</section>
+
+<section class="more_interfaces3" style="padding: 60px 0; background: #fff;">
+    <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+        <div class="section-title no-underline" style="text-align: left; margin-bottom: 30px;">
+            <h2 style="font-family: 'Heebo', sans-serif; font-size: 36px; font-weight: 700; color: #333; line-height: 1.2;">SAP to Allegro Payment Information</h2>
+        </div>
+        <p style="font-family: 'Heebo', sans-serif; font-size: 16px; line-height: 1.6; color: #666;">
+            An asynchronous outbound interface that closes the procure-to-pay loop by sending daily payment information from SAP S/4HANA back to Allegro, so the business can track invoice settlements. A custom ABAP extraction identifies new payments using delta logic and verifies that payments have not been reversed before sending. The design generates one message per invoice payment, making per-payment validation and error correction straightforward. The payload includes vendor name, bank details, payment method, amount, value date, and the SAP payment document number, flowing through SAP Process Orchestration and API management middleware into Allegro.
+        </p>
+    </div>
+</section>
+
+<section class="more_interfaces4" style="padding: 60px 0; background: #fff;">
+    <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+        <div class="section-title no-underline" style="text-align: left; margin-bottom: 30px;">
+            <h2 style="font-family: 'Heebo', sans-serif; font-size: 36px; font-weight: 700; color: #333; line-height: 1.2;">Allegro to SAP GL Journal Entries</h2>
+        </div>
+        <p style="font-family: 'Heebo', sans-serif; font-size: 16px; line-height: 1.6; color: #666;">
+            An inbound interface that transfers General Ledger journal entries originating in Allegro — accrual postings, mark-to-market reclassifications, imbalance adjustments, and intercompany settlement allocations — into the SAP S/4HANA General Ledger. The integration uses a two-step call pattern (a validation run in test mode followed by a final posting run) through the Application Interface Framework and the standard accounting BAPI. Complex value mappings derive company codes, profit centers, cost centers, and GL accounts from the source data, balancing entries are generated automatically when a transaction spans multiple company codes, and documents exceeding 950 line items are split automatically with clearing offset lines to keep every posting balanced.
+        </p>
+    </div>
+</section>
+
+<section class="more_interfaces5" style="padding: 60px 0; background: #fff;">
+    <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+        <div class="section-title no-underline" style="text-align: left; margin-bottom: 30px;">
+            <h2 style="font-family: 'Heebo', sans-serif; font-size: 36px; font-weight: 700; color: #333; line-height: 1.2;">QDOD to SAP Balance at Entity</h2>
+        </div>
+        <p style="font-family: 'Heebo', sans-serif; font-size: 16px; line-height: 1.6; color: #666;">
+            An inbound interface that transfers financial journal entries from the Quorum QDOD (Division Order &amp; Disbursements) system into the SAP S/4HANA General Ledger, covering producer and royalty payables. In upstream gas operations, QDOD calculates the revenue distribution — who owns what percentage of a well's production and how much each royalty owner and working-interest partner should be paid — and this interface posts the resulting journals to SAP. Files flow via managed file transfer into SAP Process Orchestration, where content conversion and mapping feed the Application Interface Framework for posting. Journals are enforced to balance at business unit level, with automatic intercompany entries and document splitting for postings above 950 line items.
+        </p>
+    </div>
+</section>
+
+<section class="more_interfaces6" style="padding: 60px 0; background: #fff;">
+    <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+        <div class="section-title no-underline" style="text-align: left; margin-bottom: 30px;">
+            <h2 style="font-family: 'Heebo', sans-serif; font-size: 36px; font-weight: 700; color: #333; line-height: 1.2;">TIPS to SAP Gas Gathering</h2>
+        </div>
+        <p style="font-family: 'Heebo', sans-serif; font-size: 16px; line-height: 1.6; color: #666;">
+            An inbound interface that posts gas gathering and processing imbalance accounting from the Quorum TIPS system into the SAP S/4HANA General Ledger. Gathering systems track how much gas entered the system, how much left, fuel usage, shrink, and imbalances between parties — and the resulting accounting impact must land in SAP. Journal files are picked up from a file share, grouped by production date in SAP Process Orchestration, and posted through the Application Interface Framework at the reporting code block level without summarization. Built for scale, the interface handles combinations across 75+ business units and 2,600+ responsibility centers, generates intercompany balancing entries automatically, and splits documents that exceed 950 line items.
+        </p>
+    </div>
+</section>
+
+<section class="more_interfaces7" style="padding: 60px 0; background: #fff;">
+    <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+        <div class="section-title no-underline" style="text-align: left; margin-bottom: 30px;">
+            <h2 style="font-family: 'Heebo', sans-serif; font-size: 36px; font-weight: 700; color: #333; line-height: 1.2;">TIPS to SAP AP Invoice Data</h2>
+        </div>
+        <p style="font-family: 'Heebo', sans-serif; font-size: 16px; line-height: 1.6; color: #666;">
+            An inbound, file-based interface that posts Accounts Payable invoices for imbalance payments calculated in TIPS — the operational settlement obligations that arise when one party owes another for gas imbalances. Tax codes are determined dynamically from the derived GL account ranges, and heavy value mapping translates source master data into SAP company codes, profit centers, and accounts. The interface enforces balanced journals with automatic intercompany entries, splits high-volume documents at the 950-line-item threshold, and uses an all-or-nothing commit so that if any split document fails, none are posted. Errors are logged in the AIF monitor with automated email alerts to the functional team.
+        </p>
+    </div>
+</section>
+
+<section class="more_interfaces8" style="padding: 60px 0; background: #fff;">
+    <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+        <div class="section-title no-underline" style="text-align: left; margin-bottom: 30px;">
+            <h2 style="font-family: 'Heebo', sans-serif; font-size: 36px; font-weight: 700; color: #333; line-height: 1.2;">SAP to TIPS Margin Summary</h2>
+        </div>
+        <p style="font-family: 'Heebo', sans-serif; font-size: 16px; line-height: 1.6; color: #666;">
+            A synchronous, API-based web service that extracts General Ledger margin summary data from SAP S/4HANA and returns it to the Quorum TIPS application at business unit, responsibility center, and account level. TIPS initiates the call with an accounting date and responsibility center codes; custom ABAP logic queries the Universal Journal (ACDOCA) for the leading ledger, filters the relevant P&amp;L accounts, translates SAP master data back into the legacy reporting formats, and aggregates balances in USD. The report supports a key SOX control: accountants use it to perform margin tie-outs within one to two days of month-end and quarter-end postings, backed by a custom reconciliation report for validation.
+        </p>
+    </div>
+</section>
+
+<section class="more_interfaces9" style="padding: 60px 0; background: #fff;">
+    <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+        <div class="section-title no-underline" style="text-align: left; margin-bottom: 30px;">
+            <h2 style="font-family: 'Heebo', sans-serif; font-size: 36px; font-weight: 700; color: #333; line-height: 1.2;">SAP to TIPS Imbalance Report</h2>
+        </div>
+        <p style="font-family: 'Heebo', sans-serif; font-size: 16px; line-height: 1.6; color: #666;">
+            A synchronous outbound web service that extracts accumulated Balance Sheet data from the SAP S/4HANA General Ledger and pushes it back to TIPS to populate the Imbalance report. Where the Margin Summary interface reports P&amp;L profitability, this one reports balance sheet exposure — the outstanding imbalance liabilities and receivables that show what is still owed between parties. The extraction filters a dedicated set of balance sheet accounts, calculates current-period and end-balance values using standard period-balance BAPIs, and aggregates the results by legacy reporting fields. Like its margin counterpart, it underpins a SOX-critical month-end tie-out between operational and accounting imbalance positions.
+        </p>
+    </div>
+</section>
+
+<section class="more_interfaces10" style="padding: 60px 0; background: #fff;">
+    <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+        <div class="section-title no-underline" style="text-align: left; margin-bottom: 30px;">
+            <h2 style="font-family: 'Heebo', sans-serif; font-size: 36px; font-weight: 700; color: #333; line-height: 1.2;">SAP to Allegro Customer and Vendor Balances</h2>
+        </div>
+        <p style="font-family: 'Heebo', sans-serif; font-size: 16px; line-height: 1.6; color: #666;">
+            An outbound, asynchronous daily batch interface that functions as a customer aging feed for the Allegro trading system, providing the open balance information needed for credit limit verification before new gas deals are approved. A custom ABAP program built on a Factory design pattern extracts customer open items (BSID) and any associated vendor open items (BSIK), translates SAP business partners and organizational units back into the legacy trading system formats, and pushes approximately 800 line items per call through SAP Process Orchestration into Allegro. The result: the financial system of record feeds the trading risk engine, so credit exposure decisions are based on real open receivables and payables.
+        </p>
+    </div>
+</section>
+
+<section class="more_interfaces11" style="padding: 60px 0; background: #fff;">
+    <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+        <div class="section-title no-underline" style="text-align: left; margin-bottom: 30px;">
+            <h2 style="font-family: 'Heebo', sans-serif; font-size: 36px; font-weight: 700; color: #333; line-height: 1.2;">ALIGNE to SAP AR Billing Data</h2>
+        </div>
+        <p style="font-family: 'Heebo', sans-serif; font-size: 16px; line-height: 1.6; color: #666;">
+            An API-based integration that receives Accounts Receivable billing data for imbalance settlements from the ALIGNE system and posts monthly or periodic AR invoices into SAP S/4HANA. The integration follows a two-step call pattern — a validation run to check for errors, then a final run to commit the posting — with success or failure responses returned to the source system. A dedicated duplicate invoice check compares customer, document date, reference, and amount to prevent double billing, material codes are derived for postings to sales accounts, and documents exceeding 950 line items are split with clearing offset lines under an all-or-nothing commit that preserves data integrity.
+        </p>
+    </div>
+</section>
+
+<section class="more_interfaces12" style="padding: 60px 0; background: #fff;">
+    <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+        <div class="section-title no-underline" style="text-align: left; margin-bottom: 30px;">
+            <h2 style="font-family: 'Heebo', sans-serif; font-size: 36px; font-weight: 700; color: #333; line-height: 1.2;">TIPS to SAP PATi Customer Fee Billing</h2>
+        </div>
+        <p style="font-family: 'Heebo', sans-serif; font-size: 16px; line-height: 1.6; color: #666;">
+            An inbound, file-based integration that automates the billing of monthly customer fees — gathering fees, processing fees, and imbalance adjustments calculated in TIPS. CSV invoice data is converted to XML in SAP Process Orchestration, split into individual IDocs per invoice, and processed by the SAP PATi solution, which generates debit memos that downstream billing jobs turn into customer invoices. The integration replaced a legacy process of direct database updates, bringing a structured billing lifecycle to recurring contractual fees: a typical month handles around 100 fee invoices spanning roughly 3,550 line items, concentrated over the month-end close window.
+        </p>
+    </div>
+</section>
+
+<section class="more_interfaces13" style="padding: 60px 0; background: #fff;">
+    <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+        <div class="section-title no-underline" style="text-align: left; margin-bottom: 30px;">
+            <h2 style="font-family: 'Heebo', sans-serif; font-size: 36px; font-weight: 700; color: #333; line-height: 1.2;">Endur to SAP Oil Parcel Actualization</h2>
+        </div>
+        <p style="font-family: 'Heebo', sans-serif; font-size: 16px; line-height: 1.6; color: #666;">
+            An automated batch interface that sends actualized bulk oil movements (nominations) from the Endur trading system into SAP every two hours during the business day. SAP applies the confirmed moved quantities against the corresponding contracts and exchanges to create purchase orders, sales orders, transfers, and gains or losses — updating inventory and enabling the Accounts Payable and Accounts Receivable functions to complete. The interface supports spot and exchange purchases and sales, regrades, plant-to-plant transfers, and book transfers of ownership, as well as month-end accruals and movement corrections, processing 7,300 to 8,000 records per month with middleware-level cross-reference translation and error handling.
+        </p>
+    </div>
+</section>
+
+<section class="more_interfaces14" style="padding: 60px 0; background: #fff;">
+    <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+        <div class="section-title no-underline" style="text-align: left; margin-bottom: 30px;">
+            <h2 style="font-family: 'Heebo', sans-serif; font-size: 36px; font-weight: 700; color: #333; line-height: 1.2;">Endur to SAP FI Posting</h2>
+        </div>
+        <p style="font-family: 'Heebo', sans-serif; font-size: 16px; line-height: 1.6; color: #666;">
+            A daily interface that extracts trading subledger accounting entries from Endur, formats them into XML messages, and delivers them to SAP through middleware — automating core trading finance accounting. The interface processes distinct financial streams: mark-to-market valuations, hedge accounting, accruals, realized settlements on both the receivable and payable side, broker fee invoices, and realized paper trades. Every extract is validated to ensure total debits equal total credits before transmission, and exception workflows route failures to the support team with full retry capability. The result is that deal economics calculated in the trading system flow into the General Ledger reliably enough to support daily close, hedge accounting, and financial reporting.
         </p>
     </div>
 </section>
